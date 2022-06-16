@@ -39,4 +39,8 @@ Route::get('hello/other','HelloController@other');
     
 //        return $html;
 //     });
-    
+Route::get('hello', function() {
+    return view('hello.index');
+ });
+ 
+ Route::get('hello', 'HelloController@index');
