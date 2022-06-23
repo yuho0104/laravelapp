@@ -45,3 +45,7 @@ Route::get('hello', function() {
  
  Route::get('hello', 'HelloController@index');
  Route::post('hello', 'HelloController@post');
+ // use App\Http\Middleware\HelloMiddleware;　を追記
+
+Route::get('hello', 'HelloController@index')
+->middleware(HelloMiddleware::class);

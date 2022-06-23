@@ -8,7 +8,12 @@
 @endsection
 @section('content')
    <p>ここが本文のコンテンツです。</p>
-   <ul>
+   <table>
+   @foreach($data as $item)
+   <tr><th>{{$item['name']}}</th><td>{{$item['mail']}}</td></tr>
+   @endforeach
+   </table>
+@endsection
    @each('components.item', $data, 'item')
    </ul>
 @endsection
